@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ducnm9 test website</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+        }
+        .container {
+            max-width: 640px;
+        }
+        h1 {
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            margin-bottom: 1rem;
+        }
+        p {
+            font-size: 1.125rem;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ducnm9 test website</h1>
+        <p>Welcome! This is a test website deployed on GitHub Pages.</p>
+    </div>
+
+    <!-- Bước 1: Cấu hình chatbot -->
+    <script>
+        window.sapoChatbotConfig = {
+            position: 'right',      // left, right, center, full
+            size: 'box',            // box (bubble), full (toàn màn hình)
+            appAlias: 'web_internal',
+            freshchatUserId: null,
+            deviceToken: null,
+            sapoIdentification: 'ducnmtest',
+            greetingMessage: 'Xin chào! 👋 Tôi có thể giúp gì cho bạn?',
+            navigator: [
+                {
+                    type: 'suggestion',
+                    label: 'Hướng dẫn sử dụng',
+                    prompt: 'Hướng dẫn tôi cách sử dụng sản phẩm'
+                }
+            ]
+        };
+    </script>
+
+    <!-- Bước 2: Load script embed -->
+    <script
+        src="https://chatbot-dev.sapocorp.vn/ai/api/frontend/embed.min.js"
+        id="sapo-internal-chatbot-script"
+        defer>
+    </script>
+</body>
+</html>
